@@ -12,7 +12,7 @@ ENV XSLWEB_FILE xslweb-war-$XSLWEB_VERSION.tar.gz
 ENV XSLWEB_URL https://armatiek.nl/downloads/xslweb/$XSLWEB_FILE
 
 # This directory needs to be mounted as a volume when starting the container, pointing to your local xslweb home dir
-ENV CATALINA_OPTS "$CATALINA_OPTS -Dxslweb.home=$INSTALL_DIR/$XSLWEB_VERSION/home -Dorg.terracotta.quartz.skipUpdateCheck=true"
+ENV CATALINA_OPTS "$CATALINA_OPTS -Dxslweb.home=$INSTALL_DIR/$XSLWEB_VERSION/$XSLWEB_VERSION/home -Dorg.terracotta.quartz.skipUpdateCheck=true"
 
 # Expose port 8080
 EXPOSE $PORT
